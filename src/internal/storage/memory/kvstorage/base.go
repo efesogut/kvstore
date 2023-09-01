@@ -9,6 +9,7 @@ var _ Storer = (*memoryStorage)(nil) // compile time proof
 // MemoryDB is a type alias for in memory-db type.
 type MemoryDB map[string]any
 
+// Storer defines storage behaviours.
 type Storer interface {
 	Set(key string, value any) any
 	Get(key string) (any, error)
